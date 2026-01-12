@@ -1,0 +1,27 @@
+model_name_or_path: /mnt/scratch/users/40645696/Qwen2.5-72B-Instruct
+#adapter_name_or_path: /mnt/scratch/users/40645696/qwen2.5-72b-clariq/lora/sft_sip
+quantization_bit: 4
+quantization_method: bitsandbytes  # choices: [bitsandbytes (4/8), hqq (2/3/4/5/6/8), eetq (8)]
+trust_remote_code: true
+
+### method
+stage: sft
+do_predict: true
+finetuning_type: lora
+
+### dataset
+eval_dataset: claric_dev_demo
+template: qwen
+cutoff_len: 8192
+#max_samples: 180
+overwrite_cache: true
+preprocessing_num_workers: 64
+
+### output
+output_dir: /mnt/scratch/users/40645696/qwen2.5-72b-clariq/lora/base_model/nlg-eval-devset
+overwrite_output_dir: true
+
+### eval
+per_device_eval_batch_size: 32
+predict_with_generate: true
+ddp_timeout: 180000000

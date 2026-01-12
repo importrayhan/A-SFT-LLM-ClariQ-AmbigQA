@@ -1,0 +1,55 @@
+no change     /opt/gridware/depots/9d06fe54/el8/pkg/apps/anaconda3/2023.03/bin/condabin/conda
+no change     /opt/gridware/depots/9d06fe54/el8/pkg/apps/anaconda3/2023.03/bin/bin/conda
+no change     /opt/gridware/depots/9d06fe54/el8/pkg/apps/anaconda3/2023.03/bin/bin/conda-env
+no change     /opt/gridware/depots/9d06fe54/el8/pkg/apps/anaconda3/2023.03/bin/bin/activate
+no change     /opt/gridware/depots/9d06fe54/el8/pkg/apps/anaconda3/2023.03/bin/bin/deactivate
+no change     /opt/gridware/depots/9d06fe54/el8/pkg/apps/anaconda3/2023.03/bin/etc/profile.d/conda.sh
+no change     /opt/gridware/depots/9d06fe54/el8/pkg/apps/anaconda3/2023.03/bin/etc/fish/conf.d/conda.fish
+no change     /opt/gridware/depots/9d06fe54/el8/pkg/apps/anaconda3/2023.03/bin/shell/condabin/Conda.psm1
+no change     /opt/gridware/depots/9d06fe54/el8/pkg/apps/anaconda3/2023.03/bin/shell/condabin/conda-hook.ps1
+no change     /opt/gridware/depots/9d06fe54/el8/pkg/apps/anaconda3/2023.03/bin/lib/python3.10/site-packages/xontrib/conda.xsh
+no change     /opt/gridware/depots/9d06fe54/el8/pkg/apps/anaconda3/2023.03/bin/etc/profile.d/conda.csh
+no change     /users/40645696/.bashrc
+No action taken.
+Job started...
+Python 3.8.19
+The python script output is: [INFO|2025-01-30 10:31:35] llamafactory.cli:157 >> Initializing distributed tasks at: 127.0.0.1:28921
+[WARNING|2025-01-30 10:31:41] llamafactory.hparams.parser:162 >> Evaluating model in 4/8-bit mode may cause lower scores.
+[WARNING|2025-01-30 10:31:41] llamafactory.hparams.parser:162 >> `ddp_find_unused_parameters` needs to be set as False for LoRA in DDP training.
+[INFO|2025-01-30 10:31:41] llamafactory.hparams.parser:373 >> Process rank: 0, device: cuda:0, n_gpu: 1, distributed training: True, compute dtype: None
+[INFO|2025-01-30 10:31:41] llamafactory.hparams.parser:373 >> Process rank: 1, device: cuda:1, n_gpu: 1, distributed training: True, compute dtype: None
+[INFO|2025-01-30 10:31:42] llamafactory.data.template:157 >> Add <|im_end|> to stop words.
+[INFO|2025-01-30 10:31:42] llamafactory.data.loader:157 >> Loading dataset claric_dev_demo.json...
+eval example:
+input_ids:
+[151644, 8948, 198, 2610, 525, 264, 2711, 7385, 31214, 13, 362, 1196, 374, 3330, 369, 2494, 892, 374, 537, 9355, 15985, 13, 4615, 3383, 374, 311, 728, 1526, 279, 3681, 10435, 3840, 323, 9658, 458, 4522, 429, 279, 1196, 2578, 387, 10161, 11, 1283, 1817, 2033, 315, 279, 1196, 11, 10279, 3425, 697, 24335, 1410, 387, 830, 476, 895, 13, 1416, 279, 1196, 47191, 5889, 311, 264, 63684, 3405, 11, 429, 3363, 279, 24335, 374, 4969, 13, 4695, 1744, 315, 279, 1429, 34877, 63684, 3405, 323, 2548, 1549, 13, 1446, 3383, 374, 537, 220, 311, 3410, 4226, 11, 8278, 2548, 264, 63684, 3405, 892, 1231, 1102, 304, 19497, 7766, 279, 4734, 1184, 315, 279, 1196, 13, 13759, 11, 9319, 4183, 7369, 21019, 2828, 5146, 96704, 640, 0, 151645, 198, 151644, 872, 198, 40, 1366, 311, 1414, 911, 906, 39998, 1127, 13, 151645, 198, 151644, 77091, 198, 546, 498, 3330, 369, 264, 943, 315, 906, 956, 12059, 151645, 198, 151644, 872, 198, 318, 3330, 369, 14046, 5110, 429, 653, 2114, 906, 39998, 1127, 151645, 198, 151644, 77091, 198]
+inputs:
+<|im_start|>system
+You are a search intent detector. A user is looking for something which is not clearly understood. Your task is to go through the previous conversation history and assume an idea that the user might be asking, after each response of the user, decide whether your assumption could be true or false. If the user negatively respond to a clarification question, that means the assumption is wrong. Now think of the most probable clarification question and ask again. You task is not  to provide answer, Only ask a clarification question which may result in clarifying the exact need of the user. Again, DO NOT ATTEMPT TO ANSWER!<|im_end|>
+<|im_start|>user
+I want to know about appraisals.<|im_end|>
+<|im_start|>assistant
+are you looking for a type of appraiser<|im_end|>
+<|im_start|>user
+im looking for nearby companies that do home appraisals<|im_end|>
+<|im_start|>assistant
+
+label_ids:
+[16250, 51684, 279, 2711, 7385, 11, 902, 803, 63684, 3405, 2567, 151645]
+labels:
+Understood the search intent, no more clarification question required<|im_end|>
+[INFO|2025-01-30 10:32:10] llamafactory.model.model_utils.quantization:157 >> Quantizing model to 4 bit with bitsandbytes.
+[INFO|2025-01-30 10:32:10] llamafactory.model.patcher:157 >> Using KV cache for faster generation.
+[INFO|2025-01-30 10:36:49] llamafactory.model.model_utils.attention:157 >> Using torch SDPA for faster training and inference.
+[INFO|2025-01-30 10:36:49] llamafactory.model.loader:157 >> all params: 72,706,203,648
+[WARNING|2025-01-30 10:36:49] llamafactory.train.sft.workflow:168 >> Batch generation can be very slow. Consider using `scripts/vllm_infer.py` instead.
+***** predict metrics *****
+  predict_bleu-4                 =     24.2597
+  predict_model_preparation_time =      0.0018
+  predict_rouge-1                =     25.2526
+  predict_rouge-2                =      8.5279
+  predict_rouge-l                =      22.401
+  predict_runtime                = 17:40:00.81
+  predict_samples_per_second     =       2.868
+  predict_steps_per_second       =       0.045
+[INFO|2025-01-31 04:16:50] llamafactory.train.sft.trainer:157 >> Saving prediction results to /mnt/scratch/users/40645696/qwen2.5-72b-clariq/lora/base_model/nlg-eval-devset/generated_predictions.jsonl

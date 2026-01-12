@@ -1,0 +1,12 @@
+### examples/merge_lora/llama3_q_lora.yaml
+### model
+model_name_or_path: /mnt/scratch/users/40645696/Qwen2.5-72B-Instruct
+adapter_name_or_path: /mnt/scratch/users/40645696/qwen2.5-72b-instruct/lora/sft
+template: qwen
+finetuning_type: lora
+
+### export
+export_dir: /mnt/scratch/users/40645696/qwen2.5-72b-instruct/lora/merged
+export_size: 2
+export_device: cpu
+export_legacy_format: false
