@@ -1,6 +1,6 @@
 ### Overview
 The fine-tuning pipeline is largely based on the [LlamaFactory library](https://github.com/hiyouga/LlamaFactory). Activation space ablation and learned vector are explored using the [Transformer Lens Library](https://github.com/TransformerLensOrg/TransformerLens). 
- <br>. 
+ <br>
 Two datasets are publicly available:  <br>
 i. ClariQ: [SCAI Workshop data](https://github.com/aliannejadi/ClariQ/tree/master/data)  <br>
 ii. AmbigQA: [AmbigNQ Disambiguation annotated](https://github.com/shmsw25/AmbigQA/blob/main/evidence.md)  <br>
@@ -21,7 +21,7 @@ llamafactory-cli export examples/merge_lora/llama3_lora_sft.yaml
 
 ## References
 
-If this work is helpful, please kindly cite as:
+Thanks to the open source works:
 
 ```bibtex
 @inproceedings{zheng2024llamafactory,
