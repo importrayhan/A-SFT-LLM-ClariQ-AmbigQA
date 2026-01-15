@@ -11,12 +11,29 @@ ii. Bert Based: [ClariQ Baselines](https://github.com/aliannejadi/ClariQ)<br>
 iii. Unsupervised QPP: [Common QPP methods](https://github.com/ChuanMeng/QPP4CS/blob/main/unsupervisedQPP/pre_retrieval.py)<br>
 ### Quickstart
 
-Use the following 3 commands to run LoRA **fine-tuning**, **inference** and **merging** of the Llama3-8B-Instruct model, respectively.
+We transform the ClariQ and AmbigQA into shareGPT conversational format- this appends system prompt and enables multi-turn. Furthermore, LlamaFactory accepts shareGPT format for training and inference. See the README at data/ for more explanations. <br>
+
+For this experiment, use the following dataset at data/ directory: <br>
+i. claric_sip_adv_train.json<br>
+
+ii. claric_sip_dev.json<br>
+
+iii. claric_sip_test.json<br>
+
+iv. claric_sip_train.json<br>
+
+v. ambigQA_dev.json<br>
+
+vi. ambigQA_train.json<br>
+
+
+Set the LLM path and checkpoint path at respective yaml files. Then use the following 3 commands to run LoRA **fine-tuning**, and **inference**.
 
 ```bash
-llamafactory-cli train examples/train_lora/llama3_lora_sft.yaml
-llamafactory-cli chat examples/inference/llama3_lora_sft.yaml
-llamafactory-cli export examples/merge_lora/llama3_lora_sft.yaml
+llamafactory-cli train examples/train_lora/qwen25_qlora_sip.yaml
+llamafactory-cli train examples/train_lora/llama31_qlora_sip.yaml
+llamafactory-cli chat examples/extras/nlg_eval/qwen_adv_sip.yaml
+llamafactory-cli chat examples/extras/nlg_eval/llama31_qlora_predict.yaml
 ```
 
 ## References
